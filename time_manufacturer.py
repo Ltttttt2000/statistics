@@ -13,7 +13,7 @@ df['年份'] = df['招标时间'].dt.year
 df = df[df['招标时间'] >= '2015-01-01'] # 去除2015以前的数据
 
 # print(df)
-vendors_to_keep = ['Natus', '日本光电', '博瑞康', '北京太阳', '上海诺诚', 'Cadwell']  # 要保留的厂商列表
+vendors_to_keep = ['Natus', '日本光电', '北京新拓', '博瑞康', '北京太阳', '上海诺诚', 'Cadwell', '德力凯']  # 要保留的厂商列表
 
 # 使用lambda表达式简化调整
 df['厂商'] = df['中标供应商'].apply(lambda vendor: vendor if vendor in vendors_to_keep else '其他')

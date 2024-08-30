@@ -38,7 +38,7 @@ values = defaultdict(list)
 
 for index, row in df.iterrows():
     t = row['招标时间'].strftime("%Y")
-    plt.scatter(t, row['单价金额万（成交金额，最高限价）'], alpha=0.8, c='g')
+    plt.scatter(t, row['价格'], alpha=0.8, c='g')
 
 
 plt.title('所有脑电图仪价格')
